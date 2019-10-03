@@ -1,6 +1,7 @@
 import { NgModule } from "@angular/core";
 import { CommonModule } from "@angular/common";
 
+import { SharedModule } from '../shared/shared.module';
 import { CustomersComponent } from "./customers.component";
 import {
   CustomersListComponent
@@ -10,7 +11,7 @@ import {
 } from './customers-list/filter-textbox.component';
 
 @NgModule({
-  imports: [CommonModule],
+  imports: [CommonModule, SharedModule],
   declarations: [
     CustomersComponent,
     CustomersListComponent,
