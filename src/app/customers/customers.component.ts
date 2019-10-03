@@ -9,6 +9,7 @@ import { ICustomer } from 'src/app/shared/interfaces';
 export class CustomersComponent implements OnInit {
   title: string;
   people: ICustomer[];
+  isVisible: boolean = true;
 
   constructor() {}
 
@@ -44,5 +45,9 @@ export class CustomersComponent implements OnInit {
         customerSince: new Date(2002, 10, 31)
       }
     ];
+  }
+
+  changeVisibility() {
+    this.isVisible = !this.isVisible;
   }
 }
