@@ -12,12 +12,12 @@ export class DataService {
 
   constructor(private _http: HttpClient) {}
 
-  public getCustomers(): Observable<ICustomer[]> {
+  getCustomers(): Observable<ICustomer[]> {
     return this._http.get<ICustomer[]>(
-      `${this._baseUrl}/customers.json`
+      this._baseUrl + '/customers.json'
     ).pipe(
       catchError(this.handleError)
-    );   
+    );
   }
 
   public getCustomer(id: number): Observable<ICustomer> {
